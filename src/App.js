@@ -17,6 +17,8 @@ import acceptLeave from './component/HD/AcceptLeave.component.js'
 import rejectLeave from './component/HD/RejectLeave.component.js'
 import staffMembsOfCourse from './component/HD/staffMembsOfCourse.component.js'
 import HOD from './component/HD/HOD.component.js'
+import AddLocation from './component/HR/AddLocation.js'
+import HRHomePage from './component/HR/HRHomePage.js'
 
 
 import ACHomePage from './component/AC/AC.component.js'
@@ -54,6 +56,9 @@ function App() {
             replacementRequests
 
             <Route path="/staffMembsOfCourse" exact component={staffMembsOfCourse} />
+            <Route path ="/AddLocation" exact component={AddLocation} />
+            <Route path ="/HRHomePage" exact component={HRHomePage} />
+
 
           </Switch>
         </div>
