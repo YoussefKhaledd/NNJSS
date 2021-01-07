@@ -5,6 +5,9 @@
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 100%;
+  max-width: 60%;
+  margin-left: 20%;
+  margin-top: 2%;
 }
 html {
   min-height: 100%;
