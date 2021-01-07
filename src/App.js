@@ -4,7 +4,6 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LogIn from "./component/LogIn.component";
 import Logout from './component/LogOut.component';
-
 import HODhomePage from './component/HD/HOD.component.js'
 import assignCI from './component/HD/AssignCI.component.js'
 import updateCI from './component/HD/UpdateCI.component.js'
@@ -18,6 +17,12 @@ import acceptLeave from './component/HD/AcceptLeave.component.js'
 import rejectLeave from './component/HD/RejectLeave.component.js'
 import staffMembsOfCourse from './component/HD/staffMembsOfCourse.component.js'
 import HOD from './component/HD/HOD.component.js'
+
+
+import ACHomePage from './component/AC/AC.component.js'
+import ACSched from './component/AC/Schedule.component.js'
+import ACReplacements from './component/AC/ReplacementRequests.component.js'
+import ACChangeOff from './component/AC/ACChangeOff.component.js'
 
 function App() {
   return (<Router>
@@ -40,6 +45,14 @@ function App() {
             <Route path="/acceptLeave" exact component={acceptLeave} />
             <Route path="/rejectLeave" exact component={rejectLeave} />
             <Route path="/HODHomePage" exact component={HOD} />
+            
+            <Route path="/CIHomePage" exact component={ACHomePage} />
+            <Route path="/CISchedule" exact component={ACSched} />
+            <Route path="/replacementRequests" exact component={ACReplacements} />
+            <Route path="/SendChangeOff" exact component={ACChangeOff} />
+            
+            replacementRequests
+
             <Route path="/staffMembsOfCourse" exact component={staffMembsOfCourse} />
 
           </Switch>
