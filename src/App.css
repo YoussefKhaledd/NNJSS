@@ -1,13 +1,13 @@
 .App {
   text-align: center;
-<<<<<<< HEAD
   /* background-image: url(GUCBACKGROUND.jpg); */
-=======
->>>>>>> 7646eba23eee1459af75e7527351c822222ab9dc
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 100%;
+  max-width: 60%;
+  margin-left: 20%;
+  margin-top: 2%;
 }
 .leftContainer{
   width: 350px;
