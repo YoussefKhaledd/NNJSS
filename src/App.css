@@ -1,30 +1,11 @@
 .App {
   text-align: center;
-<<<<<<< HEAD
   /* background-image: url(GUCBACKGROUND.jpg); */
-=======
->>>>>>> 7646eba23eee1459af75e7527351c822222ab9dc
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 100%;
 }
-.leftContainer{
-  width: 350px;
-  text-align: center;
-  margin-left: 2px;
-  margin-top:20px ;
-}
-.containersView{
-  overflow: hidden;
-  float: left;
-  width: 350px;
-  text-align: center;
-  margin-left: 10px;
-  margin-top:10px ;
-  
-}
-
 html {
   min-height: 100%;
   /* background-image: url(GUCBACKGROUND.jpg); */
