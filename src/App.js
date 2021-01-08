@@ -23,6 +23,7 @@ import ViewDayOffOne from './component/HD/ViewDayOffOne.component.js'
 
 
 import AddLocation from './component/HR/AddLocation.js'
+import LocationSettings from './component/HR/LocationSettings.js'
 import HRHomePage from './component/HR/HRHomePage.js'
 
 

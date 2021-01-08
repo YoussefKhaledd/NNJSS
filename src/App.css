@@ -1,10 +1,7 @@
 .App {
   text-align: center;
-<<<<<<< HEAD
   /* background-image: url(GUCBACKGROUND.jpg); */
-=======
   /* background-image: url(GUCBACKGROUND.jpg);
->>>>>>> 8e296e69c82847babb7d0368f78ba98d243cf9d5
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -13,7 +10,6 @@
   margin-left: 20%;
   margin-top: 2%; */
 }
-<<<<<<< HEAD
 .leftContainer {
   width: 350px;
   text-align: center;
@@ -27,7 +23,7 @@
   text-align: center;
   margin-left: 10px;
   margin-top: 10px;
-=======
+}
 .center{
 margin-left: 25%;
 Align-Items: center;
@@ -58,7 +54,6 @@ Justify-Content: centre;
   margin-right: 20%;
   margin-top: 5%;
   margin-bottom: 2%;
->>>>>>> 8e296e69c82847babb7d0368f78ba98d243cf9d5
 }
 html {
   min-height: 100%;
