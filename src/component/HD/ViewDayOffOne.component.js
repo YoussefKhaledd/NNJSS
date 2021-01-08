@@ -1,8 +1,10 @@
 import React,{useState} from 'react'
 import NavigationBar from './HODNavigationBar'
 import axios from 'axios'
+import { Container } from 'react-bootstrap'
 
-function getAllStaffMem(list){
+
+function getDayOff(list){
     if(list!==undefined && list.length>0&&list!==null){
     return list.map(elem =>{
       return(
@@ -10,13 +12,7 @@ function getAllStaffMem(list){
       <tr>
         <td>{elem.staffName}</td>
         <td>{elem.staffId}</td>
-        <td>{elem.email}</td>
         <td>{elem.dayOff}</td>
-        <td>{elem.officeLocation}</td>
-        <td>{elem.staffAge}</td>
-        <td>{elem.staffGender}</td>
-        
-        
       </tr>
       )
     })
@@ -27,20 +23,23 @@ function getAllStaffMem(list){
     
   
   }
-
-export default function StaffMembs() {
+export default function ViewDayOffOne() {
     const [state,setState] = useState([])
+    const [id,setId]=useState([])
     if(localStorage.getItem('auth-token') === null){
         window.location.href = "/login";
     }
     else{
-    axios.post('http://localhost:5000/viewAllStaff',{},
+        const handleSubmit = async e=>{
+            e.preventDefault();
+             axios.post('http://localhost:5000/viewdayOff',{staffId:id},
     {  
         headers: {
         'auth-token': localStorage.getItem('auth-token')
         }
     })
       .then(res =>{
+          console.log(res)
           setState(res.data);
 
 
@@ -48,29 +47,27 @@ export default function StaffMembs() {
       .catch(error =>{
         console.log(error);
       })
-    
+    }
     return (
         <div>
         <NavigationBar />
+<Container>
+        <input onChange = {e =>setId(e.target.value)}></input>
+        <button onClick = {handleSubmit}>View</button>
+        </Container>
        <table className="table table-sm table-dark">
         <thead className = "thead-light">
           <tr>
             <th>Staff Name</th>
             <th>Staff Id</th>
-            <th>Email</th>
             <th>Day Off</th>
-            <th>Office Location</th>
-            <th>Staff Age</th>
-            <th>Staff Gender</th>
-           
           </tr>
         </thead>
         <tbody>
-          {getAllStaffMem(state)}
+          {getDayOff(state)}
         </tbody>
 
         </table>
         </div>
     )
-    }
-}
+    }}

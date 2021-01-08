@@ -1,13 +1,44 @@
 .App {
   text-align: center;
-  /* background-image: url(GUCBACKGROUND.jpg); */
+  /* background-image: url(GUCBACKGROUND.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 100%;
   max-width: 60%;
   margin-left: 20%;
-  margin-top: 2%;
+  margin-top: 2%; */
+}
+.center{
+margin-left: 25%;
+Align-Items: center;
+Justify-Content: centre;
+}
+.HDBACKGRD{
+  padding: 4%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 1rem;
+  background: lightgray;
+}
+.HDNAV{
+  padding: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  /* border-radius: 1rem; */
+  background: lightgray;
+}
+.HDLOGOUT{
+  display: flex;
+  justify-content: flex-end;
+}
+.LOGIN{
+  text-align: center;
+  width: 300px;
+  margin-left: 35%;
+  margin-right: 20%;
+  margin-top: 5%;
+  margin-bottom: 2%;
 }
 .leftContainer{
   width: 350px;
