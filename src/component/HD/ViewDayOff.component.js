@@ -2,7 +2,8 @@ import React,{useState} from 'react'
 import NavigationBar from './HODNavigationBar'
 import axios from 'axios'
 
-function getAllStaffMem(list){
+
+function getDayOff(list){
     if(list!==undefined && list.length>0&&list!==null){
     return list.map(elem =>{
       return(
@@ -10,13 +11,7 @@ function getAllStaffMem(list){
       <tr>
         <td>{elem.staffName}</td>
         <td>{elem.staffId}</td>
-        <td>{elem.email}</td>
         <td>{elem.dayOff}</td>
-        <td>{elem.officeLocation}</td>
-        <td>{elem.staffAge}</td>
-        <td>{elem.staffGender}</td>
-        
-        
       </tr>
       )
     })
@@ -27,14 +22,13 @@ function getAllStaffMem(list){
     
   
   }
-
-export default function StaffMembs() {
+export default function ViewDayOff() {
     const [state,setState] = useState([])
     if(localStorage.getItem('auth-token') === null){
         window.location.href = "/login";
     }
     else{
-    axios.post('http://localhost:5000/viewAllStaff',{},
+    axios.post('http://localhost:5000/viewdayOff',{},
     {  
         headers: {
         'auth-token': localStorage.getItem('auth-token')
@@ -48,7 +42,7 @@ export default function StaffMembs() {
       .catch(error =>{
         console.log(error);
       })
-    
+
     return (
         <div>
         <NavigationBar />
@@ -57,20 +51,14 @@ export default function StaffMembs() {
           <tr>
             <th>Staff Name</th>
             <th>Staff Id</th>
-            <th>Email</th>
             <th>Day Off</th>
-            <th>Office Location</th>
-            <th>Staff Age</th>
-            <th>Staff Gender</th>
-           
           </tr>
         </thead>
         <tbody>
-          {getAllStaffMem(state)}
+          {getDayOff(state)}
         </tbody>
 
         </table>
         </div>
     )
-    }
-}
+    }}

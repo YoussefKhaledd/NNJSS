@@ -1,7 +1,7 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route ,Link} from "react-router-dom";
 import LogIn from "./component/LogIn.component";
 import Logout from './component/LogOut.component';
 import HODhomePage from './component/HD/HOD.component.js'
@@ -16,6 +16,11 @@ import acceptLeave from './component/HD/AcceptLeave.component.js'
 import rejectLeave from './component/HD/RejectLeave.component.js'
 import staffMembsOfCourse from './component/HD/staffMembsOfCourse.component.js'
 import HOD from './component/HD/HOD.component.js'
+import courseStaffMems from './component/HD/staffMembsOfCourse.component.js'
+import ViewDayOff  from './component/HD/ViewDayOff.component.js'
+import ViewDayOffOne from './component/HD/ViewDayOffOne.component.js'
+
+
 import AddLocation from './component/HR/AddLocation.js'
 import HRHomePage from './component/HR/HRHomePage.js'
 
@@ -48,11 +53,14 @@ function App() {
             <Route path="/ViewCourseCoverage" exact component={courseCoverage} />
             <Route path="/responseChangeReq" exact component={responseChangeReq} />
             <Route path="/staffMembs" exact component={staffMembs} />
+
+
             <Route path="/LeaveRequests" exact component={ACLeaveReq} />
             <Route path="/acceptLeave" exact component={acceptLeave} />
             <Route path="/rejectLeave" exact component={rejectLeave} />
             <Route path="/HODHomePage" exact component={HOD} />
-            
+            <Route path="/ViewDayOff" exact component={ViewDayOff} />
+            <Route path="/ViewDayOffOne" exact component={ViewDayOffOne} />
             <Route path="/CIHomePage" exact component={ACHomePage} />
             <Route path="/CISchedule" exact component={ACSched} />
             <Route path="/replacementRequests" exact component={ACReplacements} />
@@ -63,8 +71,10 @@ function App() {
             <Route path="/AllRequests" exact component={allReqs} />
             
 
-            <Route path="/staffMembsOfCourse" exact component={staffMembsOfCourse} />
-            <Route path ="/AddLocation" exact component={AddLocation} />
+           {//<Route path="/staffMembsOfCourse" exact component={staffMembsOfCourse} />
+
+            //<Route path ="/LocationSettings" exact component={LocationSettings} />
+            }
             <Route path ="/HRHomePage" exact component={HRHomePage} />
 
 
