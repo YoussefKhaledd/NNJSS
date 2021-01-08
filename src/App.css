@@ -40,22 +40,6 @@ Justify-Content: centre;
   margin-top: 5%;
   margin-bottom: 2%;
 }
-.leftContainer{
-  width: 350px;
-  text-align: center;
-  margin-left: 2px;
-  margin-top:20px ;
-}
-.containersView{
-  overflow: hidden;
-  float: left;
-  width: 350px;
-  text-align: center;
-  margin-left: 10px;
-  margin-top:10px ;
-  
-}
-
 html {
   min-height: 100%;
   /* background-image: url(GUCBACKGROUND.jpg); */
