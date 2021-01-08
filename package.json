@@ -3,24 +3,34 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@material-ui/core": "^4.11.2",
+    "@popperjs/core": "^2.6.0",
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "bootstrap-icons": "^1.2.2",
+    "link": "^0.1.5",
     "material": "^0.4.3",
     "mdb-ui-kit": "^3.0.0",
     "mdbreact": "^5.0.1",
+    "popper.js": "^1.16.1",
     "react": "^17.0.1",
-    "react-bootstrap": "^1.4.0",
+    "react-bootstrap": "^1.4.3",
     "react-bootstrap-dropdown-menu": "^1.1.23",
     "react-dom": "^17.0.1",
+    "react-history-router": "^1.4.1",
     "react-icons": "^4.1.0",
+<<<<<<< HEAD
+    "react-popper": "^2.2.4",
+=======
     "react-minimal-side-navigation": "^1.5.1",
+>>>>>>> 8e296e69c82847babb7d0368f78ba98d243cf9d5
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "reactstrap": "^8.8.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

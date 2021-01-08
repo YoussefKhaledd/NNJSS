@@ -1,7 +1,7 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route ,Link} from "react-router-dom";
 import LogIn from "./component/LogIn.component";
 import Logout from './component/LogOut.component';
 import HODhomePage from './component/HD/HOD.component.js'
@@ -59,11 +59,8 @@ function App() {
             <Route path="/CISchedule" exact component={ACSched} />
             <Route path="/replacementRequests" exact component={ACReplacements} />
             <Route path="/SendChangeOff" exact component={ACChangeOff} />
-            
-            replacementRequests
-
             <Route path="/staffMembsOfCourse" exact component={staffMembsOfCourse} />
-            <Route path ="/AddLocation" exact component={AddLocation} />
+            <Route path ="/LocationSettings" exact component={LocationSettings} />
             <Route path ="/HRHomePage" exact component={HRHomePage} />
 
 
