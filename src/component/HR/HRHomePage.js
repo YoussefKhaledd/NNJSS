@@ -10,6 +10,7 @@ import HrNav from './NavBar'
 import { useHistory } from 'react-router-dom';
 import{ useState } from 'react';
 import { Link } from 'react-router-dom';
+import './styles.css';
 
 
 
@@ -21,9 +22,9 @@ export default function HRHomePage() {
        
         <div>
        <div class="jumbotron text-center " style={{backgroundColor:"#385E77"}}>
-  <h1 class="font-weight-bold">Welcome</h1>
-  <HrNav />
-
+  <h1 class="headerHR">Welcome</h1>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light">
+ </nav>
 </div>
          <div class="container">
     <div class="row">

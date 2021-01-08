@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import useForm from './useForm'
 import { MDBRow, MDBCol, MDBIcon,MDBBtn,MDBInput,MDBDropdownItem,MDBDropdown,MDBDropdownMenu,MDBDropdownToggle } from "mdbreact";
 import './styles.css';
 import ReactDOM from 'react-dom'
 import axios from'axios';
-
-
-
-
-
 
 
 //these are for the locationSettingsPage
@@ -181,7 +175,6 @@ const updateLoc = async (name,type,cap) => {
     axios.post('http://localhost:5000/deleteLocation', 
     { 
       locationName : name,
-    
   },
   {  headers: {
       'auth-token': localStorage.getItem('auth-token'),

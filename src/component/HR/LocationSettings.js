@@ -3,9 +3,8 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon,MDBBtn,MDBInput,MDBDropdownItem,MDBDropdown,MDBDropdownMenu,MDBDropdownToggle, MDBBtnGroup } from "mdbreact";
 import 'mdbreact/dist/css/mdb.css';
 import NavBar from './NavBar'
-import CollapsedBarOfLoction from './CollapsedBar'
+import CollapsedBarOfLoctaion from './CollapsedBar'
 import { useHistory } from 'react-router-dom';
-
 
 
 export default function LocationSettings() {
@@ -21,7 +20,7 @@ export default function LocationSettings() {
             <MDBBtn  color="blue-grey lighten-4" onClick={()=>history.push('/Profile')}>
             <MDBIcon far icon="user" size="lg" /></MDBBtn>
       </div>
-    <CollapsedBarOfLoction/>
+    <CollapsedBarOfLoctaion/>
     </div>
     )
 }

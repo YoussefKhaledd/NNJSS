@@ -17,23 +17,13 @@ import acceptLeave from './component/HD/AcceptLeave.component.js'
 import rejectLeave from './component/HD/RejectLeave.component.js'
 import staffMembsOfCourse from './component/HD/staffMembsOfCourse.component.js'
 import HOD from './component/HD/HOD.component.js'
-<<<<<<< HEAD
 import LocationSettings from './component/HR/LocationSettings.js'
-=======
-import courseStaffMems from './component/HD/staffMembsOfCourse.component.js'
-import ViewDayOff  from './component/HD/ViewDayOff.component.js'
-import ViewDayOffOne from './component/HD/ViewDayOffOne.component.js'
-
-
-import AddLocation from './component/HR/AddLocation.js'
->>>>>>> 8e296e69c82847babb7d0368f78ba98d243cf9d5
 import HRHomePage from './component/HR/HRHomePage.js'
-
-
 import ACHomePage from './component/AC/AC.component.js'
 import ACSched from './component/AC/Schedule.component.js'
 import ACReplacements from './component/AC/ReplacementRequests.component.js'
 import ACChangeOff from './component/AC/ACChangeOff.component.js'
+
 
 function App() {
   return (<Router>
@@ -52,13 +42,13 @@ function App() {
             <Route path="/ViewCourseCoverage" exact component={courseCoverage} />
             <Route path="/responseChangeReq" exact component={responseChangeReq} />
             <Route path="/staffMembs" exact component={staffMembs} />
-            <Route path="/CourseStaff" exact component={courseStaffMems} />
+            <Route path="/CourseStaff" exact component={courseStaffMems} /> 
             <Route path="/LeaveRequests" exact component={viewLeaveRequest} />
             <Route path="/acceptLeave" exact component={acceptLeave} />
             <Route path="/rejectLeave" exact component={rejectLeave} />
             <Route path="/HODHomePage" exact component={HOD} />
-            <Route path="/ViewDayOff" exact component={ViewDayOff} />
-            <Route path="/ViewDayOffOne" exact component={ViewDayOffOne} />
+            <Route path="/ViewDayOff" exact component={ViewDayOff} /> 
+            <Route path="/ViewDayOffOne" exact component={ViewDayOffOne} /> 
             <Route path="/CIHomePage" exact component={ACHomePage} />
             <Route path="/CISchedule" exact component={ACSched} />
             <Route path="/replacementRequests" exact component={ACReplacements} />
@@ -66,8 +56,6 @@ function App() {
             <Route path="/staffMembsOfCourse" exact component={staffMembsOfCourse} />
             <Route path ="/LocationSettings" exact component={LocationSettings} />
             <Route path ="/HRHomePage" exact component={HRHomePage} />
-
-
           </Switch>
         </div>
       </div>

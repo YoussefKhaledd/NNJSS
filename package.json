@@ -23,11 +23,8 @@
     "react-dom": "^17.0.1",
     "react-history-router": "^1.4.1",
     "react-icons": "^4.1.0",
-<<<<<<< HEAD
     "react-popper": "^2.2.4",
-=======
     "react-minimal-side-navigation": "^1.5.1",
->>>>>>> 8e296e69c82847babb7d0368f78ba98d243cf9d5
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "reactstrap": "^8.8.1",
