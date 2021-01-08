@@ -1,0 +1,23 @@
+.btnSubmit {
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 20px;
+}
+.fCard {
+  background-color: lightblue;
+}
+
+.top-buffer {
+  margin-left: -190px;
+  margin-top: 10px;
+}
+.location-type {
+  margin-right: 200px;
+}
+.up {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.homeBtn {
+  margin-left: -1000px;
+}
