@@ -30,7 +30,7 @@ export default function Replacements() {
 
         <div>
         <Navbar.Brand>MEHTAGA TAZBEET</Navbar.Brand>
-        <Navbar.Brand>Send A New Request </Navbar.Brand>
+        <Navbar.Brand>Send A New Replacement Request </Navbar.Brand>
 
         <Row>
              <Col><Navbar.Brand>Target Staff ID: </Navbar.Brand></Col>
@@ -42,7 +42,7 @@ export default function Replacements() {
             <Col><Navbar.Brand>Slot ID: </Navbar.Brand></Col>
              <Col> <FormControl  placeholder="Slot ID"  aria-label="Username"  aria-describedby="basic-addon1"/></Col>
         </Row>
-        <Button variant="dark">Send</Button>{' '}
+        <Button variant="dark">Send</Button>
 
         </div>
 

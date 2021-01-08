@@ -12,7 +12,6 @@ import viewChangeRequests from './component/HD/ViewChangeRequests.component.js'
 import courseCoverage from './component/HD/CourseCoverage.component.js'
 import responseChangeReq from './component/HD/ResponseChangeReq.component.js'
 import staffMembs from './component/HD/StaffMembs.component.js'
-import viewLeaveRequest from './component/HD/ViewLeaveRequest.component.js'
 import acceptLeave from './component/HD/AcceptLeave.component.js'
 import rejectLeave from './component/HD/RejectLeave.component.js'
 import staffMembsOfCourse from './component/HD/staffMembsOfCourse.component.js'
@@ -24,7 +23,13 @@ import HRHomePage from './component/HR/HRHomePage.js'
 import ACHomePage from './component/AC/AC.component.js'
 import ACSched from './component/AC/Schedule.component.js'
 import ACReplacements from './component/AC/ReplacementRequests.component.js'
+import SlotLinkings from './component/AC/SlotLinkings.component.js'
 import ACChangeOff from './component/AC/ACChangeOff.component.js'
+import ACLeaveReq from './component/AC/ACLeaveReq.js'
+import Notifications from './component/AC/Notifications.component.js'
+import allReqs from './component/AC/AllRequests.component.js'
+
+
 
 function App() {
   return (<Router>
@@ -43,7 +48,7 @@ function App() {
             <Route path="/ViewCourseCoverage" exact component={courseCoverage} />
             <Route path="/responseChangeReq" exact component={responseChangeReq} />
             <Route path="/staffMembs" exact component={staffMembs} />
-            <Route path="/LeaveRequests" exact component={viewLeaveRequest} />
+            <Route path="/LeaveRequests" exact component={ACLeaveReq} />
             <Route path="/acceptLeave" exact component={acceptLeave} />
             <Route path="/rejectLeave" exact component={rejectLeave} />
             <Route path="/HODHomePage" exact component={HOD} />
@@ -51,9 +56,12 @@ function App() {
             <Route path="/CIHomePage" exact component={ACHomePage} />
             <Route path="/CISchedule" exact component={ACSched} />
             <Route path="/replacementRequests" exact component={ACReplacements} />
+            <Route path="/slotLinking" exact component={SlotLinkings} />
             <Route path="/SendChangeOff" exact component={ACChangeOff} />
+            <Route path="/sendLeaveRequest" exact component={ACLeaveReq} />
+            <Route path="/Notifications" exact component={Notifications} />
+            <Route path="/AllRequests" exact component={allReqs} />
             
-            replacementRequests
 
             <Route path="/staffMembsOfCourse" exact component={staffMembsOfCourse} />
             <Route path ="/AddLocation" exact component={AddLocation} />

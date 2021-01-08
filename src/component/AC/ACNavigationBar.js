@@ -18,15 +18,14 @@ export default function HODNavigationBar() {
 
             <NavDropdown title="Requests">
             <NavDropdown.Item href="/replacementRequests">Replacement Requests</NavDropdown.Item>
-            <NavDropdown.Item href="/LeaveRequests">Slot Linking Requests</NavDropdown.Item>
+            <NavDropdown.Item href="/slotLinking">Send Slot Linking Request</NavDropdown.Item>
             <NavDropdown.Item href="/SendChangeOff">Send Change Day Off</NavDropdown.Item>
-            <NavDropdown.Item href="/LeaveRequests">Send Leave Request</NavDropdown.Item>
-            <NavDropdown.Item href="/LeaveRequests"> ekhwaty</NavDropdown.Item>
+            <NavDropdown.Item href="/SendLeaveRequest">Send Leave Request</NavDropdown.Item>
             </NavDropdown>
             
-            <button type="button" class="btn btn-light" href = '/AddCI'> Notifications </button>
+            <Nav.Link  href = '/Notifications'> Notifications </Nav.Link>
 
-            <button type="button" class="btn btn-light" href = '/AddCI'> View All Requests </button>
+            <Nav.Link href = '/AllRequests'> View All Requests </Nav.Link>
           
             </Nav>
 
