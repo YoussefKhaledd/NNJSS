@@ -1,5 +1,6 @@
 import React from 'react'
 import NavigationBar from './HODNavigationBar'
+import HDHOME from './HDHOMEPAGE.component'
 
 export default function HOD() {
     if(localStorage.getItem('auth-token') == null){
@@ -8,7 +9,8 @@ export default function HOD() {
     else{
     return (
         <div>
-           <NavigationBar />
+           <HDHOME />
+           
         </div>
     )
 }

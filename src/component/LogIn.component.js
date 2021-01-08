@@ -49,10 +49,10 @@ export default function LogIn(props){
      }
         return (
             <Router>
-            <Container className="containers">
+            <Container className="LOGIN">
             <form  onSubmit={handleSubmit}>
 
-            <img src={image} alt="Logo" height='100px' />
+            <img src={image} className="center" alt="Logo" className='LOGIN' />
 
                 <div className="form-group">
                     <label>Email</label>

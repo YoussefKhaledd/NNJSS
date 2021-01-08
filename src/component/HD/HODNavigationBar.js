@@ -3,9 +3,10 @@ import {  Navbar, Nav, NavDropdown,Dropdown } from 'react-bootstrap';
 import image from '../logo.png'
 import '../../App.css'
 
+
 export default function HODNavigationBar() {
     return (
-        <div>
+        <div className='NavBar'>
              <Navbar collapseOnSelect expand="lg" bg="dark" variant="light">
             <img src={image} alt="Logo" width='30px' />
             <Navbar.Brand href="/HODHomePage">Home</Navbar.Brand>
