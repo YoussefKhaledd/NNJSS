@@ -4,31 +4,30 @@ import axios from 'axios'
 
 import {Row,Col, Navbar,Dropdown,Button} from 'react-bootstrap';
 
+const sendChangeOffRequest = async (day) => {
+  axios.post('http://localhost:5000/sendChangeOff', 
+    {
+        dayOff:day,
+    },
+
+    {  
+        headers: {
+        'auth-token': localStorage.getItem('auth-token'),
+        }
+    }).then(response => {
+            console.log(response)
+      }).catch(error => {
+            console.log(error.response)
+      })}
 
 
 export default function SendChangeOff() {
-    const [day,setDay] = useState();
-
-    var currDay = "Choose day"
-    {if(day!=null) currDay=day}
+    const [day,setDay] = useState("Choose day");
     if(localStorage.getItem('auth-token') === null){
         window.location.href = "/login";
     }
 
     else{
-    axios.get('http://localhost:5000/viewSchedule', {  
-        headers: {
-        'auth-token': localStorage.getItem('auth-token')
-        }
-    })
-      .then(res =>{
-          setState(res.data);
-
-
-      })
-      .catch(error =>{
-        console.log(error);
-      })
 
     return (
         <div>
@@ -39,7 +38,7 @@ export default function SendChangeOff() {
         <Col>
         <Dropdown >
   <Dropdown.Toggle variant="success" id="dropdown-basic">
-      {currDay}
+      {day}
       </Dropdown.Toggle>
 
   <Dropdown.Menu>
@@ -53,15 +52,7 @@ export default function SendChangeOff() {
 </Dropdown>
 </Col>
 </Row>
-<Button variant="dark" onClick=
-{e =>
-  axios.post('http://localhost:5000/sendChangeOff',
-  {
-    body:{dayOff: day}, 
-  headers: {'auth-token': localStorage.getItem('auth-token')  }
-}
-  )
-} >Send</Button>
+<Button onClick={()=>sendChangeOffRequest(day)}  >Send</Button>
         </div>
     )
 }

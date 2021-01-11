@@ -4,32 +4,46 @@ import NavigationBar from './ACNavigationBar'
 
 import {Button,Row,Col, Navbar, FormControl,Dropdown} from 'react-bootstrap';
 
+const sendSlotLinking = async (day,slot,location,course) => {
+  if(day=="Choose Day")
+  return alert("please choose a day")
+
+  if(slot=="Choose Slot")
+  return alert("please choose a slot")
+
+  axios.post('http://localhost:5000/sendSlotLinking', 
+    {
+      courseId:course,
+      day:day,
+      timing:slot,
+      slotlocation:location,
+    },
+
+    {  
+        headers: {
+        'auth-token': localStorage.getItem('auth-token'),
+        }
+    }).then(response => {
+      alert(response.data)
+  }).catch(error => {
+        alert("Error: "+error.response.data)
+  })}
+
 export default function AddLocation() {
-    const [state,setState] = useState([])
+  const [day,setDay] = useState("Choose Day");
+  const [slot,setSlot] = useState("Choose Slot");
+  const [location,setLocation] = useState();
+  const [course,setCourse] = useState();
     if(localStorage.getItem('auth-token') === null){
         window.location.href = "/login";
     }
     else{
-    axios.get('http://localhost:5000/viewSchedule', {  
-        headers: {
-        'auth-token': localStorage.getItem('auth-token')
-        }
-    })
-      .then(res =>{
-          setState(res.data);
-
-
-      })
-      .catch(error =>{
-        console.log(error);
-      })
       
       return (
         <div>
         <NavigationBar />
 
         <div>
-        <Navbar.Brand>MEHTAGA TAZBEET</Navbar.Brand>
         <Navbar.Brand>Send A New Slot Linking Request </Navbar.Brand>
 
 
@@ -38,16 +52,16 @@ export default function AddLocation() {
         <Col>
         <Dropdown >
   <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Saturday
+    {day}
   </Dropdown.Toggle>
 
   <Dropdown.Menu>
-    <Dropdown.Item eventKey="option-1">Saturday</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Sunday</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Monday</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Tuesday</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Wednesday</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Thursday</Dropdown.Item>
+    <Dropdown.Item onClick={e => setDay("Saturday")}>Saturday</Dropdown.Item>
+    <Dropdown.Item onClick={e => setDay("Sunday")}>Sunday</Dropdown.Item>
+    <Dropdown.Item onClick={e => setDay("Monday")}>Monday</Dropdown.Item>
+    <Dropdown.Item onClick={e => setDay("Tuesday")}>Tuesday</Dropdown.Item>
+    <Dropdown.Item onClick={e => setDay("Wednesday")}>Wednesday</Dropdown.Item>
+    <Dropdown.Item onClick={e => setDay("Thursday")}>Thursday</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 </Col>
@@ -58,15 +72,15 @@ export default function AddLocation() {
         <Col>
         <Dropdown >
   <Dropdown.Toggle variant="success" id="dropdown-basic">
-    first
+    {slot}
   </Dropdown.Toggle>
 
   <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">first</Dropdown.Item>
-    <Dropdown.Item href="#/action-1">second</Dropdown.Item>
-    <Dropdown.Item href="#/action-1">third</Dropdown.Item>
-    <Dropdown.Item href="#/action-1">fourth</Dropdown.Item>
-    <Dropdown.Item href="#/action-1">fifth</Dropdown.Item>
+    <Dropdown.Item onClick={e => setSlot("first")}>First</Dropdown.Item>
+    <Dropdown.Item onClick={e => setSlot("second")}>Second</Dropdown.Item>
+    <Dropdown.Item onClick={e => setSlot("third")}>Third</Dropdown.Item>
+    <Dropdown.Item onClick={e => setSlot("fourth")}>Fourth</Dropdown.Item>
+    <Dropdown.Item onClick={e => setSlot("fifth")}>Fifth</Dropdown.Item>
       </Dropdown.Menu>
 </Dropdown>
 </Col>
@@ -74,14 +88,14 @@ export default function AddLocation() {
 
         <Row>
             <Col><Navbar.Brand>Location: </Navbar.Brand></Col>
-             <Col> <FormControl  placeholder="Location"/></Col>
+             <Col> <FormControl  placeholder="Location" onChange={e => setLocation(e.target.value)}/></Col>
         </Row>
 
         <Row>
             <Col><Navbar.Brand>Course ID: </Navbar.Brand></Col>
-             <Col> <FormControl  placeholder="Course ID"/></Col>
+             <Col> <FormControl  placeholder="Course ID" onChange={e => setCourse(e.target.value)}/></Col>
         </Row>
-        <Button variant="dark">Send</Button>{' '}
+        <Button variant="dark" onClick= {()=>sendSlotLinking(day,slot,location,course)} >Send</Button>{' '}
 
         </div>
 

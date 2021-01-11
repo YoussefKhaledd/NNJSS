@@ -71,10 +71,10 @@ function App() {
             <Route path="/AllRequests" exact component={allReqs} />
             
 
-           {//<Route path="/staffMembsOfCourse" exact component={staffMembsOfCourse} />
+{//           <Route path="/staffMembsOfCourse" exact component={staffMembsOfCourse} />
 
-            //<Route path ="/LocationSettings" exact component={LocationSettings} />
-            }
+          //<Route path ="/LocationSettings" exact component={LocationSettings} />
+  } 
             <Route path ="/HRHomePage" exact component={HRHomePage} />
 
 
