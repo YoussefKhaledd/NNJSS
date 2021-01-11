@@ -15,13 +15,14 @@ import staffMembs from './component/HD/StaffMembs.component.js'
 import acceptLeave from './component/HD/AcceptLeave.component.js'
 import rejectLeave from './component/HD/RejectLeave.component.js'
 import staffMembsOfCourse from './component/HD/staffMembsOfCourse.component.js'
+import ACLeaveReq from './component/AC/ACLeaveReq.js'
+import viewLeaveRequest from './component/HD/ViewLeaveRequest.component.js'
+import Notifications from   './component/AC/Notifications.component.js'
 import HOD from './component/HD/HOD.component.js'
+import AllRequests from './component/AC/AllRequests.component.js'
 import courseStaffMems from './component/HD/staffMembsOfCourse.component.js'
 import ViewDayOff  from './component/HD/ViewDayOff.component.js'
 import ViewDayOffOne from './component/HD/ViewDayOffOne.component.js'
-
-
-//import AddLocation from './component/HR/AddLocation.js'
 import LocationSettings from './component/HR/LocationSettings.js'
 import HRHomePage from './component/HR/HRHomePage.js'
 import ACHomePage from './component/AC/AC.component.js'
@@ -29,10 +30,15 @@ import ACSched from './component/AC/Schedule.component.js'
 import ACReplacements from './component/AC/ReplacementRequests.component.js'
 import SlotLinkings from './component/AC/SlotLinkings.component.js'
 import ACChangeOff from './component/AC/ACChangeOff.component.js'
-import ACLeaveReq from './component/AC/ACLeaveReq.js'
-import Notifications from './component/AC/Notifications.component.js'
-import allReqs from './component/AC/AllRequests.component.js'
-
+import StaffAdjustment from './component/HR/StaffAdjustment.js'
+import DepartmentOptions from './component/HR/DepartmentOptions.js'
+import CoursesOptions from './component/HR/CoursesOptions.js'
+import FacultyOptions from './component/HR/FacultyOptions.js'
+import CheckHoursOrDays from './component/HR/CheckHoursOrDays'
+import UpdateSalary from './component/HR/UpdateSalary.js'
+import CheckAttendance from './component/HR/CheckAttendance'
+import ManualSignOut from './component/HR/ManualSignOut'
+import ManualSignIn from './component/HR/ManualSignIn'
 
 
 
@@ -53,8 +59,6 @@ function App() {
             <Route path="/ViewCourseCoverage" exact component={courseCoverage} />
             <Route path="/responseChangeReq" exact component={responseChangeReq} />
             <Route path="/staffMembs" exact component={staffMembs} />
-
-
             <Route path="/LeaveRequests" exact component={ACLeaveReq} />
             <Route path="/CourseStaff" exact component={courseStaffMems} /> 
             <Route path="/acceptLeave" exact component={acceptLeave} />
@@ -69,14 +73,23 @@ function App() {
             <Route path="/SendChangeOff" exact component={ACChangeOff} />
             <Route path="/sendLeaveRequest" exact component={ACLeaveReq} />
             <Route path="/Notifications" exact component={Notifications} />
-            <Route path="/AllRequests" exact component={allReqs} />
+            <Route path="/AllRequests" exact component={AllRequests} />
+            <Route path ="/LocationSettings" exact component={LocationSettings} />
+            <Route path ="/HRHomePage" exact component={HRHomePage} />
+            <Route path ="/StaffAdjustment" exact component={StaffAdjustment} />
+            <Route path ="/DepartmentOptions" exact component={DepartmentOptions} />
+            <Route path ="/CoursesOptions" exact component={CoursesOptions} />
+            <Route path ="/FacultyOptions" exact component={FacultyOptions} />
+            <Route path ="/CheckHoursOrDays" exact component={CheckHoursOrDays} />
+            <Route path ="/UpdateSalary" exact component={UpdateSalary} />
+            <Route path ="/CheckAttendance" exact component={CheckAttendance} />
+            <Route path ="/ManualSignOut" exact component={ManualSignOut} />
+            <Route path ="/ManualSignIn" exact component={ManualSignIn} />
+
+
             
 
-{//           <Route path="/staffMembsOfCourse" exact component={staffMembsOfCourse} />
 
-          //<Route path ="/LocationSettings" exact component={LocationSettings} />
-  } 
-            <Route path ="/HRHomePage" exact component={HRHomePage} />
           </Switch>
         </div>
       </div>

@@ -3,6 +3,19 @@
   font-size: 13px;
   margin-top: 20px;
 }
+.container-salary {
+  width: 18%;
+}
+.container-update {
+  margin-left: -1000px;
+}
+.text-salary {
+  text-align: left;
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
 .fCard {
   background-color: lightblue;
 }
@@ -21,5 +34,72 @@
   margin-right: 20px;
 }
 .homeBtn {
-  margin-left: -870px;
+  margin-left: -900px;
+}
+.btn-circle.btn-sm {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  font-size: 8px;
+  text-align: center;
+}
+.btn-circle.btn-md {
+  width: 50px;
+  height: 50px;
+  padding: 7px 10px;
+  border-radius: 25px;
+  font-size: 10px;
+  text-align: center;
+}
+.btn-circle.btn-xl {
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
+  padding: 10px 16px;
+  border-radius: 45px;
+  font-size: 12px;
+  text-align: center;
+}
+.addStaffText {
+  font-weight: 900;
+  font-size: 16px;
+  font-family: Lucida Sans;
+}
+.textDep {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+}
+.btn-dep.btn-xl {
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
+  padding: 10px 16px;
+  border-radius: 45px;
+  font-size: 12px;
+  text-align: center;
+}
+.container-att {
+  border-radius: 25px;
+  background: #cfd8dc;
+  padding: 10px;
+  width: 500px;
+  height: 418px;
+  margin-right: 20px;
+  margin-top: -20;
+}
+.container-att2 {
+  border-radius: 25px;
+  background: #cfd8dc;
+  padding: 10px;
+  width: 400px;
+  height: 50px;
+  text-align: center;
+}
+.text-records {
+  text-align: left;
+  margin-right: 20px;
+  font-size: 15px;
+  font-weight: 450;
 }
