@@ -21,7 +21,7 @@ import ViewDayOff  from './component/HD/ViewDayOff.component.js'
 import ViewDayOffOne from './component/HD/ViewDayOffOne.component.js'
 
 
-import AddLocation from './component/HR/AddLocation.js'
+//import AddLocation from './component/HR/AddLocation.js'
 import LocationSettings from './component/HR/LocationSettings.js'
 import HRHomePage from './component/HR/HRHomePage.js'
 import ACHomePage from './component/AC/AC.component.js'
@@ -57,7 +57,6 @@ function App() {
 
             <Route path="/LeaveRequests" exact component={ACLeaveReq} />
             <Route path="/CourseStaff" exact component={courseStaffMems} /> 
-            <Route path="/LeaveRequests" exact component={viewLeaveRequest} />
             <Route path="/acceptLeave" exact component={acceptLeave} />
             <Route path="/rejectLeave" exact component={rejectLeave} />
             <Route path="/HODHomePage" exact component={HOD} />
