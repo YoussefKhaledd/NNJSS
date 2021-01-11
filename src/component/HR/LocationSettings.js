@@ -2,7 +2,6 @@ import  { Component } from 'react';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { MDBRow, MDBCol, MDBIcon,MDBBtn,MDBInput,MDBDropdownItem,MDBDropdown,MDBDropdownMenu,MDBDropdownToggle, MDBBtnGroup } from "mdbreact";
 import 'mdbreact/dist/css/mdb.css';
-import NavBar from './NavBar'
 import CollapsedBarOfLoctaion from './CollapsedBar'
 import { useHistory } from 'react-router-dom';
 
