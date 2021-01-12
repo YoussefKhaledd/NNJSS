@@ -1,6 +1,11 @@
 import React,{useState} from 'react'
 import NavigationBar from './HODNavigationBar'
 import axios from 'axios'
+import { Container} from 'react-bootstrap'
+import TableScrollbar from 'react-table-scrollbar';
+import './hdComponent.css'
+
+
 
 function getAllStaffMem(list){
     if(list!==undefined && list.length>0&&list!==null){
@@ -52,7 +57,11 @@ export default function StaffMembs() {
     return (
         <div>
         <NavigationBar />
-       <table className="table table-sm table-dark">
+        <Container style={{height:'300px'}} className="hdCompBig">
+              <h3 className="TextLeft">
+        All Staff Members </h3>
+        <TableScrollbar rows={4}>
+       <table  className="table table-sm table-dark">
         <thead className = "thead-light">
           <tr>
             <th>Staff Name</th>
@@ -70,7 +79,16 @@ export default function StaffMembs() {
         </tbody>
 
         </table>
+        </TableScrollbar>
+        </Container>
+
+
+
+  
+
         </div>
+
+
     )
     }
 }

@@ -1,7 +1,10 @@
 import React,{useState} from 'react'
 import NavigationBar from './HODNavigationBar'
 import axios from 'axios'
-import { Container } from 'react-bootstrap'
+import TableScrollbar from 'react-table-scrollbar';
+import { Container,Button} from 'react-bootstrap'
+import './hdComponent.css'
+
 
 
 function getDayOff(list){
@@ -51,10 +54,14 @@ export default function ViewDayOffOne() {
     return (
         <div>
         <NavigationBar />
-<Container>
-        <input onChange = {e =>setId(e.target.value)}></input>
-        <button onClick = {handleSubmit}>View</button>
-        </Container>
+        <Container style={{height:'300px'}} className="hdCompBig">
+              <h3 className="TextLeft">
+        Specific Staff Member Day Off </h3>
+        <h5 className="TextLeftSub"> Staff ID : <span style={{display:'inline-block'}}>
+        <input onChange = {e =>setId(e.target.value)}></input></span>
+        <span style={{display:'inline-block',marginLeft:'25px'}}>
+        <Button variant="primary" onClick = {handleSubmit}>View</Button></span></h5>
+        <TableScrollbar rows={3}>
        <table className="table table-sm table-dark">
         <thead className = "thead-light">
           <tr>
@@ -68,6 +75,8 @@ export default function ViewDayOffOne() {
         </tbody>
 
         </table>
+        </TableScrollbar>
+        </Container>
         </div>
     )
     }}

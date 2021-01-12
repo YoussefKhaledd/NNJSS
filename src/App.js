@@ -50,8 +50,11 @@ import Hours from './component/ALL/Hours1'
 
 
 
+import Trial from "./Trial" 
+
 function App() {
   return (<Router>
+  
     <div className="App">
       <div className="outer">
         <div className="inner">

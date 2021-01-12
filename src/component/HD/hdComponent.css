@@ -1,0 +1,40 @@
+.hdComp{
+        width: 70%;
+        height: 250px;
+        margin-top: 12%;
+        margin-left: 15%;
+        border-radius: 1rem;
+        background: #e8f4f8;
+      }
+
+      .hdCompBig{
+        width: 70%;
+        height: 300 px;
+        margin-top: 12%;
+        margin-left: 15%;
+        border-radius: 1rem;
+        background: #e8f4f8;
+      }
+.TextLeft{
+text-align: center;
+text-decoration:underline;
+margin-bottom: 35px;
+
+}
+
+.TextLeftSub{
+    text-align: left;
+    margin-bottom: 25px;
+    }
+
+    .buttonAssign {
+        border: none;
+        color: white;
+        margin-left: 22%;
+        padding: 15px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 32px;
+      }
