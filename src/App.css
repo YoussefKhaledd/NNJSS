@@ -30,11 +30,13 @@ Align-Items: center;
 Justify-Content: centre;
 }
 .HDBACKGRD{
-  padding: 4%;
-  margin-top: 1%;
+  padding-top: 5%;
+  padding-bottom : 5%;
+  width: fit-content;
+  margin-top: 10%;
   margin-bottom: 1%;
   border-radius: 1rem;
-  background: lightgray;
+  background: #e8f4f8;
 }
 .HDNAV{
   padding: 1%;

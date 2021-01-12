@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import Jumbotron from 'react-bootstrap/Jumbotron'
 import axios from 'axios';
 import Container from 'react-bootstrap/Container'
 import {IconContext} from "react-icons"
@@ -7,9 +6,8 @@ import { MDBRow, MDBCol, MDBIcon,MDBBtn,MDBDropdownItem,MDBDropdown,MDBDropdownT
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import {  Navbar, Nav, NavDropdown,Dropdown } from 'react-bootstrap';
-import image from '../logo.png'
-import { Fragment } from 'react';
+import NewNav from './HDHOMEPAGENAV.component'
+
 
 
 export default function HDHOMEPAGE() {
@@ -34,11 +32,8 @@ export default function HDHOMEPAGE() {
 
     return (
         <div>
-        <div align="left" class="HDNAV " style={{backgroundColor:"#385E77"}}>
-
-    <h3 > Welcome Back Dr.{name} <MDBBtn style={{marginLeft:'640px',font:'Brush Script MT'}} gradient="aqua" href="/LogOut">LogOut</MDBBtn> </h3>
-       
-        </div>
+         <NewNav />
+        
         <Container className="HDBACKGRD">
           <div class="container">
      <div class="row">

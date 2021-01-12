@@ -1,6 +1,10 @@
 import React,{useState} from 'react'
 import NavigationBar from './HODNavigationBar'
 import axios from 'axios'
+import TableScrollbar from 'react-table-scrollbar';
+import { Container,Button} from 'react-bootstrap'
+import './hdComponent.css'
+
 
 function getAllStaffMem(list){
     if(list!==undefined && list.length>0&&list!==null){
@@ -59,8 +63,15 @@ export default function StaffMembsOfCourse() {
     return (
         <div>
         <NavigationBar />
-        <input onChange = {e =>setCourse(e.target.value)} ></input>
-        <button onClick={handleSubmit}> Submit</button>
+        <Container style={{height:'300px'}} className="hdCompBig">
+              <h3 className="TextLeft">
+        Staff Members Of Specific Course </h3>
+        <h5 className="TextLeftSub"> Course ID : <span style={{display:'inline-block'}}>
+        <input onChange = {e =>setCourse(e.target.value)} ></input></span>
+        <span style={{display:'inline-block',marginLeft:'25px'}}>
+        <Button variant="primary" onClick={handleSubmit}> View</Button>
+        </span></h5>
+        <TableScrollbar rows={3}>
        <table className="table table-sm table-dark">
         <thead className = "thead-light">
           <tr>
@@ -79,6 +90,8 @@ export default function StaffMembsOfCourse() {
         </tbody>
 
         </table>
+        </TableScrollbar>
+        </Container>
         </div>
     )
     }

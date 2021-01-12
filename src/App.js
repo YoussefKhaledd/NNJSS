@@ -20,6 +20,7 @@ import HOD from './component/HD/HOD.component.js'
 import courseStaffMems from './component/HD/staffMembsOfCourse.component.js'
 import ViewDayOff  from './component/HD/ViewDayOff.component.js'
 import ViewDayOffOne from './component/HD/ViewDayOffOne.component.js'
+import ViewTa from './component/HD/ViewTA.component.js'
 
 
 import AddLocation from './component/HR/AddLocation.js'
@@ -32,8 +33,11 @@ import ACSched from './component/AC/Schedule.component.js'
 import ACReplacements from './component/AC/ReplacementRequests.component.js'
 import ACChangeOff from './component/AC/ACChangeOff.component.js'
 
+import Trial from "./Trial" 
+
 function App() {
   return (<Router>
+  
     <div className="App">
       <div className="outer">
         <div className="inner">
@@ -63,6 +67,7 @@ function App() {
             <Route path="/staffMembsOfCourse" exact component={staffMembsOfCourse} />
             <Route path ="/LocationSettings" exact component={LocationSettings} />
             <Route path ="/HRHomePage" exact component={HRHomePage} />
+            <Route path ="/ViewTA" exact component={ViewTa} />
 
 
           </Switch>
