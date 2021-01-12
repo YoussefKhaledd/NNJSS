@@ -39,6 +39,14 @@ import UpdateSalary from './component/HR/UpdateSalary.js'
 import CheckAttendance from './component/HR/CheckAttendance'
 import ManualSignOut from './component/HR/ManualSignOut'
 import ManualSignIn from './component/HR/ManualSignIn'
+import profile from './component/ALL/Profile'
+import UpdateAge from './component/ALL/UpdateAge'
+import ResetPassword from './component/ALL/ResetPassword'
+import Sign from './component/ALL/Sign'
+import ViewAttendance from './component/ALL/ViewAttendance'
+import MissingDays from './component/ALL/MissingDays'
+import Hours from './component/ALL/Hours1'
+
 
 
 
@@ -50,7 +58,14 @@ function App() {
           <Switch>
             <Route exact path='/' component={LogIn} />
             <Route path="/LogIn" exact component={LogIn} />
-            <Route path="/LogOut" component={Logout}/>
+            <Route path="/LogOut" component={Logout}/>=
+            <Route path ="/Profile" exact component={profile} />
+            <Route path ="/UpdateAge" exact component={UpdateAge} />
+            <Route path ="/ResetPassword" exact component={ResetPassword} />
+            <Route path ="/Sign" exact component={Sign} />
+            <Route path ="/ViewAttendance" exact component={ViewAttendance} />
+            <Route path ="/MissingDays" exact component={MissingDays} />
+            <Route path ="/Hours" exact component={Hours} />
             <Route path ="/AddCI" exact component= {assignCI} />
             <Route path="/UpdateCI" exact component={updateCI} />
             <Route path="/DeleteCI" exact component={deleteCI} />
