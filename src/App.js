@@ -123,20 +123,20 @@ function App() {
             <Route path ="/AssignACTOCC" exact component={AssignACTOCC} />
             <Route path ="/ViewSlotAssignment" exact component={SlotAssignmentCI} />
 
-<<<<<<< HEAD
             <Route path ="/ViewSlotLinkings" exact component={ViewSlotLinkings} />
             
             <Route path ="/ManageSlots" exact component={ManageSlots} />
-            
-=======
-            
 
->>>>>>> 68778aaab46aa8ce37015fd8c72f0056f6e68328
+
             
-            
-            
-            
-            
+            <Route path ="/UpdateAge" exact component={UpdateAge} />
+            <Route path ="/ResetPassword" exact component={ResetPassword} />
+            <Route path ="/Sign" exact component={Sign} />
+            <Route path ="/ViewAttendance" exact component={ViewAttendance} />
+            <Route path ="/MissingDays" exact component={MissingDays} />
+            <Route path ="/Hours" exact component={Hours} />
+            <Route path ="/Profile" exact component={profile} />
+
 
 
           </Switch>
