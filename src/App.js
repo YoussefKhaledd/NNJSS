@@ -53,6 +53,14 @@ import SlotAssignmentCI from './component/CI/SlotsAssignment.component';
 
 
 import MainHomePage from './MainHomePage.component'
+import profile from './component/ALL/Profile'
+import UpdateAge from './component/ALL/UpdateAge'
+import ResetPassword from './component/ALL/ResetPassword'
+import Sign from './component/ALL/Sign'
+import ViewAttendance from './component/ALL/ViewAttendance'
+import MissingDays from './component/ALL/MissingDays'
+import Hours from './component/ALL/Hours1'
+
 
 
 

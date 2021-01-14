@@ -19,6 +19,13 @@ export default function LocationSettings() {
             <MDBBtn  color="blue-grey lighten-4" onClick={()=>history.push('/Profile')}>
             <MDBIcon far icon="user" size="lg" /></MDBBtn>
       </div>
+      
+            <MDBBtn  color="blue-grey lighten-4" onClick={()=>history.push('/UpdateAge')}>Update Age</MDBBtn>
+            <MDBBtn  color="blue-grey lighten-4" onClick={()=>history.push('/ResetPassword')}>Reset Password</MDBBtn>
+            <MDBBtn  color="blue-grey lighten-4" onClick={()=>history.push('/Sign')}>Sign IN/OUT</MDBBtn>
+            <MDBBtn  color="blue-grey lighten-4" onClick={()=>history.push('/ViewAttendance')}>Attendance</MDBBtn>
+            <MDBBtn  color="blue-grey lighten-4" onClick={()=>history.push('/MissingDays')}>Missing Day</MDBBtn>
+            <MDBBtn  color="blue-grey lighten-4" onClick={()=>history.push('/Hours')}>check Hours</MDBBtn>
     <CollapsedBarOfLoctaion/>
     </div>
     )
