@@ -22,7 +22,7 @@ export default function LogIn(props){
        // console.log(res)
        localStorage.setItem('auth-token', res.data.token)
        if((String)(res.data.type) == "hd"){
-       window.location.href = "/HODHomePage";
+       window.location.href = "/HODhomePage";
      }
      else if(res.data.type == "ta"){
        window.location.href = "/TAHomePage";

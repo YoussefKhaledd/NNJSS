@@ -78,7 +78,7 @@ import TimelapseIcon from '@material-ui/icons/Timelapse';
 import TransferWithinAStationIcon from '@material-ui/icons/TransferWithinAStation';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
-const drawerWidth = 200 ;
+const drawerWidth = 203 ;
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -146,6 +146,9 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 export default function Trial() {
+  if(localStorage.getItem('auth-token') === null){
+    window.location.href = "/login";
+}
   const classes = useStyles();
   const theme = useTheme();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -305,7 +308,7 @@ export default function Trial() {
                 onClose={handleCloseLLL}
             >
                 <MenuItem component={Link} to="/ChangeDayOffRequests">View Change Day Off Requests</MenuItem>
-                <MenuItem component={Link} to="/LeaveRequests">View Leave Requests</MenuItem>
+                <MenuItem component={Link} to="/LeaveRequestHD">View Leave Requests</MenuItem>
             </Menu>
               </ListItem>
               <Divider />

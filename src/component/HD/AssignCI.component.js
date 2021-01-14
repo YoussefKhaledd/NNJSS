@@ -93,7 +93,7 @@ export default function AssignCI() {
       </Button></span></h5>    
      
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} style={{marginTop:'15%'}}>
         <Modal.Header closeButton>
           <Modal.Title style={{textAlign:'center'}}>{state}</Modal.Title>
         </Modal.Header>

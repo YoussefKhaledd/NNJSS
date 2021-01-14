@@ -17,10 +17,19 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
 import { Link } from "react-router-dom";
+import {  Navbar, Nav, NavDropdown,Dropdown } from 'react-bootstrap';
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import AssignmentInd from '@material-ui/icons/AssignmentInd';
+import GroupIcon from '@material-ui/icons/Group';
+import TodayIcon from '@material-ui/icons/Today';
+import ListAltIcon from '@material-ui/icons/ListAlt';
+import TimelapseIcon from '@material-ui/icons/Timelapse';
 import TransferWithinAStationIcon from '@material-ui/icons/TransferWithinAStation';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
-const drawerWidth = 180 ;
+const drawerWidth = 223 ;
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -87,7 +96,10 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export default function HDHOMEPAGENAV() {
+export default function CINavBar() {
+    if(localStorage.getItem('auth-token') === null){
+        window.location.href = "/login";
+    }
     const classes = useStyles();
     const theme = useTheme();
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -96,8 +108,21 @@ export default function HDHOMEPAGENAV() {
     const handleClick = (event) => {
       setAnchorEl(event.currentTarget);
     };
-
   
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+  
+  
+    const [anchorEll, setAnchorEll] = React.useState(null);
+  
+    const handleClickL = (event) => {
+      setAnchorEll(event.currentTarget);
+    };
+  
+    const handleCloseL = () => {
+      setAnchorEll(null);
+    };
     const handleDrawerOpen = () => {
       setOpen(true);
     };
@@ -149,41 +174,74 @@ export default function HDHOMEPAGENAV() {
           <Divider />
           <List>
            
-              <ListItem button component={Link} to="/HODHomePage">
+              <ListItem button component={Link} to="/CIHomePage">
               <ListItemIcon onClick={handleClick} ><HomeIcon style={{ fontSize: 20 }} />
 </ListItemIcon>
                 <ListItemText primary={"Home"} />
               </ListItem>
               <Divider />
-              
+              <ListItem button>
+              <ListItemIcon onClick={handleClick} ><AssignmentInd style={{ fontSize: 20 }}  /></ListItemIcon>
+              <ListItemText onClick={handleClick} primary={"All Staff"} />
+                <Menu
+                id="AllStaff"
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+                >
+                <MenuItem component={Link} to="/ViewStaffInDepartment">View All Staff in Department</MenuItem>
+                <MenuItem component={Link} to="/ViewStaffPerCourse">View All Staff Per Course</MenuItem>
+                </Menu>
+              </ListItem>
               <Divider />
-              <ListItem button component={Link} to="/ViewTA">
-              <ListItemIcon><TransferWithinAStationIcon style={{ fontSize: 20 }}/></ListItemIcon>
-                <ListItemText  primary={"Profile"} />
-              </ListItem>    
-              <ListItem ></ListItem>
-              <ListItem ></ListItem>
-              <ListItem ></ListItem><ListItem >
-              </ListItem><ListItem >
-              </ListItem><ListItem ></ListItem><ListItem ></ListItem> <ListItem >
-              </ListItem><ListItem ></ListItem><ListItem >
-              </ListItem><ListItem >
-              </ListItem><ListItem ></ListItem> <ListItem >
-              </ListItem><ListItem >
-              </ListItem><ListItem ></ListItem><ListItem >
-              </ListItem><ListItem >
-              </ListItem><ListItem >
-              </ListItem><ListItem >
-              </ListItem><ListItem >
-              </ListItem><ListItem >
-              </ListItem><ListItem >
-              </ListItem><ListItem ></ListItem><ListItem >
+              <ListItem button>
+                <ListItemIcon onClick={handleClickL}><GroupIcon style={{ fontSize: 20 }}  /></ListItemIcon>
+                <ListItemText onClick={handleClickL} primary={"Assignment Of AC"} />
+                <Menu
+                    id="simple-menu"
+                    anchorEl={anchorEll}
+                    keepMounted
+                    open={Boolean(anchorEll)}
+                    onClose={handleCloseL}
+                >
+                    <MenuItem component={Link} to="/UpdateACInCourse">Update Assignment Of AC</MenuItem>
+                    <MenuItem component={Link} to="/DeleteACInCourse">Delete Assignment Of AC</MenuItem>
+                </Menu>
+              </ListItem>
+              <Divider />
+              <ListItem button component={Link} to="/AssignACMEM">
+                <ListItemIcon><TimelapseIcon style={{ fontSize: 20 }}/></ListItemIcon>
+                <ListItemText primary={"Assign AC Member"} />
+              </ListItem>
+              <Divider />
+              <ListItem button component={Link} to="/RemoveAssignedAC">
+                <ListItemIcon><TimelapseIcon style={{ fontSize: 20 }}/></ListItemIcon>
+                <ListItemText primary={"Remove AC Member"} />
+              </ListItem>
+              <Divider />
+
+              <ListItem button component={Link} to="/ViewCourseCoverageAC">
+                <ListItemIcon><TimelapseIcon style={{ fontSize: 20 }}/></ListItemIcon>
+                <ListItemText primary={"Course Coverage"} />
+              </ListItem>
+              <Divider />
+              <ListItem button component={Link} to="/AssignACTOCC">
+                <ListItemIcon><TimelapseIcon style={{ fontSize: 20 }}/></ListItemIcon>
+                <ListItemText primary={"Assign Coordinator"} />
+              </ListItem>
+              <Divider />
+              <ListItem button component={Link} to="/ViewSlotAssignment">
+                <ListItemIcon><TimelapseIcon style={{ fontSize: 20 }}/></ListItemIcon>
+                <ListItemText primary={"Slots' Assignment"} />
+              </ListItem>
+              <ListItem >
+              </ListItem><ListItem ></ListItem><ListItem ></ListItem><ListItem ></ListItem><ListItem ></ListItem><ListItem >
               </ListItem><ListItem ></ListItem>
               <ListItem button component={Link} to="/LogOut">
               <ListItemIcon><ExitToAppIcon style={{ fontSize: 30 }}/></ListItemIcon>
                 <ListItemText  primary={"Log Out"} />
               </ListItem>
-
 
           </List>
 
