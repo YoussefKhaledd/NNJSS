@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route ,Link} from "react-router-dom";
 import LogIn from "./component/LogIn.component";
 import Logout from './component/LogOut.component';
 import HODhomePage from './component/HD/HOD.component.js'
+import ViewTA from './component/HD/ViewTA.component.js'
 import assignCI from './component/HD/AssignCI.component.js'
 import updateCI from './component/HD/UpdateCI.component.js'
 import deleteCI from './component/HD/DeleteCI.component.js'
@@ -39,10 +40,24 @@ import UpdateSalary from './component/HR/UpdateSalary.js'
 import CheckAttendance from './component/HR/CheckAttendance'
 import ManualSignOut from './component/HR/ManualSignOut'
 import ManualSignIn from './component/HR/ManualSignIn'
+///////////////////////////////////////////////////////////////////////////CI/////////////////////////////////////////////////
+import CIMainHome from './component/CI/CIHomePage.component'
+import ViewStaffCI from './component/CI/ViewStaffDepAC.component'
+import ViewStaffCourseCI from './component/CI/ViewStaffCourseAC.component'
+import AssignACMEM from './component/CI/AssignAcademicMember.component'
+import UpdateAC from './component/CI/updateAC.component'
+import DeleteACInCourse from './component/CI/DeleteACInCourse.component'
+import CoursesCoverage from './component/CI/CoursesCoverage.component'
+import AssignACTOCC from './component/CI/AssignACTOCC.component';
+import SlotAssignmentCI from './component/CI/SlotsAssignment.component';
+
+
+import MainHomePage from './MainHomePage.component'
 
 
 
 import Trial from "./Trial" 
+import ViewStaffDepAC from './component/CI/ViewStaffDepAC.component';
 
 function App() {
   return (<Router>
@@ -53,6 +68,7 @@ function App() {
           <Switch>
             <Route exact path='/' component={LogIn} />
             <Route path="/LogIn" exact component={LogIn} />
+            <Route path="/MainHomePage" exact component={MainHomePage} />            
             <Route path="/LogOut" component={Logout}/>
             <Route path ="/AddCI" exact component= {assignCI} />
             <Route path="/UpdateCI" exact component={updateCI} />
@@ -63,13 +79,15 @@ function App() {
             <Route path="/responseChangeReq" exact component={responseChangeReq} />
             <Route path="/staffMembs" exact component={staffMembs} />
             <Route path="/LeaveRequests" exact component={ACLeaveReq} />
+            <Route path="/LeaveRequestHD" exact component={viewLeaveRequest} />
             <Route path="/CourseStaff" exact component={courseStaffMems} /> 
             <Route path="/acceptLeave" exact component={acceptLeave} />
             <Route path="/rejectLeave" exact component={rejectLeave} />
             <Route path="/HODHomePage" exact component={HOD} />
             <Route path="/ViewDayOff" exact component={ViewDayOff} /> 
             <Route path="/ViewDayOffOne" exact component={ViewDayOffOne} /> 
-            <Route path="/CIHomePage" exact component={ACHomePage} />
+            <Route path="/ViewTA" exact component={ViewTA} /> 
+            <Route path="/CIHomePage" exact component={CIMainHome} />
             <Route path="/CISchedule" exact component={ACSched} />
             <Route path="/replacementRequests" exact component={ACReplacements} />
             <Route path="/slotLinking" exact component={SlotLinkings} />
@@ -88,8 +106,21 @@ function App() {
             <Route path ="/CheckAttendance" exact component={CheckAttendance} />
             <Route path ="/ManualSignOut" exact component={ManualSignOut} />
             <Route path ="/ManualSignIn" exact component={ManualSignIn} />
+            <Route path ="/ViewStaffInDepartment" exact component={ViewStaffCI} />
+            <Route path ="/ViewStaffPerCourse" exact component={ViewStaffCourseCI} />
+            <Route path ="/AssignACMEM" exact component={AssignACMEM} />
+            <Route path ="/UpdateACInCourse" exact component={UpdateAC} />
+            <Route path ="/DeleteACInCourse" exact component={DeleteACInCourse} />
+            <Route path ="/ViewCourseCoverageAC" exact component={CoursesCoverage} />
+            <Route path ="/AssignACTOCC" exact component={AssignACTOCC} />
+            <Route path ="/ViewSlotAssignment" exact component={SlotAssignmentCI} />
 
+            
 
+            
+            
+            
+            
             
 
 

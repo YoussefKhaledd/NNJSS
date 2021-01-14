@@ -19,6 +19,13 @@ import HomeIcon from '@material-ui/icons/Home';
 import { Link } from "react-router-dom";
 import TransferWithinAStationIcon from '@material-ui/icons/TransferWithinAStation';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { MDBIcon,MDBBtn,MDBDropdownItem,MDBDropdown,MDBDropdownToggle,MDBDropdownMenu,MDBCard,MDBCardHeader, MDBCardBody,MDBCardTitle,MDBCardText,MDBContainer} from "mdbreact";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
+import Container from 'react-bootstrap/Container'
+
+
 
 const drawerWidth = 180 ;
 
@@ -86,8 +93,10 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(3),
     },
   }));
-
-export default function HDHOMEPAGENAV() {
+export default function CIHomePage() {
+    if(localStorage.getItem('auth-token') === null){
+        window.location.href = "/login";
+    }
     const classes = useStyles();
     const theme = useTheme();
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -149,7 +158,7 @@ export default function HDHOMEPAGENAV() {
           <Divider />
           <List>
            
-              <ListItem button component={Link} to="/HODHomePage">
+              <ListItem button component={Link} to="/CIHomePage">
               <ListItemIcon onClick={handleClick} ><HomeIcon style={{ fontSize: 20 }} />
 </ListItemIcon>
                 <ListItemText primary={"Home"} />
@@ -189,6 +198,67 @@ export default function HDHOMEPAGENAV() {
 
           
         </Drawer>
+
+        <Container className="HDBACKGRD">
+          <div className="container">
+     <div class="row">
+     <div class="col-sm-4">
+     <MDBDropdown dropright>
+      <MDBDropdownToggle caret color="primary">
+        View All Staff <MDBIcon icon="search"  className="ml-1" />
+      </MDBDropdownToggle>
+      <MDBDropdownMenu basic>
+        <MDBDropdownItem href="/ViewStaffInDepartment"> View All Staff in Department </MDBDropdownItem>
+        <MDBDropdownItem href="/ViewStaffPerCourse">View All Staff per Course</MDBDropdownItem>
+      </MDBDropdownMenu>
+    </MDBDropdown>
+       <p>View All Staff in Department/Per Course</p>
+     </div>
+
+     <div class="col-sm-4">
+     <MDBDropdown dropright>
+      <MDBDropdownToggle caret color="primary">
+      Assignment Of Academic Member <MDBIcon icon="user-edit"   className="ml-1" />
+      </MDBDropdownToggle>
+      <MDBDropdownMenu basic>
+        <MDBDropdownItem href="/UpdateACInCourse"> Update Assignment Of AC Member </MDBDropdownItem>
+        <MDBDropdownItem href="/DeleteACInCourse">Delete Assignment Of AC Member</MDBDropdownItem>
+      </MDBDropdownMenu>
+    </MDBDropdown>
+
+       <p>Update/Delete Assignment Of AC Member</p>
+     </div>
+
+     <div class="col-sm-4">
+     
+     <MDBBtn rounded size="m" color="primary" href="/AssignACMEM">Assign Academic Member<MDBIcon icon="spinner"    className="ml-1" /></MDBBtn>
+       <p>Assign AC Member to Unassigned slots</p>
+     </div>
+
+     
+    
+   </div>
+ 
+   <div class = "row"> 
+ 
+   <div class="col-sm-4"style={{padding:10}} >
+   <MDBBtn rounded size="lg" color="primary"  href="/ViewSlotAssignment">Slots' Assignment<MDBIcon icon="chalkboard-teacher"   className="ml-1" /></MDBBtn>
+       <p>View The Slots' Assignment Of Courses </p>
+     </div>
+     
+   <div class="col-sm-4" style={{padding:10}}>
+   <MDBBtn rounded size="lg" color="primary" href="/ViewCourseCoverageAC">Course Coverage <MDBIcon icon="spinner"    className="ml-1" /></MDBBtn>
+       <p>View Assigned Courses Coverage </p>
+     </div>
+     <div class="col-sm-4" style={{padding:10}}>
+   <MDBBtn rounded size="lg" color="primary"  href="/AssignACTOCC">Assign to Coordinator<MDBIcon icon="chalkboard-teacher"   className="ml-1" /></MDBBtn>
+       <p>Assign Academic Member to Coordinator </p>
+     </div>
+
+     
+   </div>
+   </div>
+   </Container>
         
       </div>
     )

@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import axios from 'axios';
 import Container from 'react-bootstrap/Container'
 import {IconContext} from "react-icons"
-import { MDBRow, MDBCol, MDBIcon,MDBBtn,MDBDropdownItem,MDBDropdown,MDBDropdownToggle,MDBDropdownMenu,MDBCard,MDBCardHeader, MDBCardBody,MDBCardTitle,MDBCardText,MDBContainer} from "mdbreact";
+import { MDBIcon,MDBBtn,MDBDropdownItem,MDBDropdown,MDBDropdownToggle,MDBDropdownMenu,MDBCard,MDBCardHeader, MDBCardBody,MDBCardTitle,MDBCardText,MDBContainer} from "mdbreact";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
