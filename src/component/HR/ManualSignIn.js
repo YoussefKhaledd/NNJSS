@@ -45,10 +45,10 @@ export default function ManualSignIn() {
         <div className="container-salary">  <MDBInput  label="Day" onChange={event=>setDay(event.target.value)}/></div>     
         </div>
         <div>
-        <p className="text-records">Enter the Check Out Hour</p>
+        <p className="text-records">Enter the Sign in Hour</p>
         <div className="container-salary">  <MDBInput label="Hour"  onChange={event=>setcheckInH(event.target.value)}/></div>     
         </div>
-        <p className="text-records">Enter the Check Out Minute</p>
+        <p className="text-records">Enter the Sign in Minute</p>
         <div className="container-salary">  <MDBInput   label="Minute" onChange={event=>setcheckInM(event.target.value)}/></div>     
         </div>
         <h1 style={{textAlign:left,marginLeft:70}}>
@@ -80,7 +80,7 @@ const manualSignIn = async (id,year,month,day,checkInmin,checkInhour) => {
               'auth-token': localStorage.getItem('auth-token'),
               }
           }).then(response => {
-                  console.log(response)
-            }).catch(error => {
-                  console.log(error.response)
+            alert(response.data)
+          }).catch(error => {
+                alert("Error: "+error.response.data)
             })}    

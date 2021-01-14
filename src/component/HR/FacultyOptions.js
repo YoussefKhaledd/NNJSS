@@ -110,10 +110,10 @@ const addFaculty = async (fac,note) => {
         'auth-token': localStorage.getItem('auth-token'),
         }
     }).then(response => {
-            console.log(response)
-      }).catch(error => {
-            console.log(error.response)
-      })}
+      alert(response.data)
+  }).catch(error => {
+     alert("Error: "+error.response.data)
+  })}
 
 const updateFaculty = async (fac,note) => {
     axios.post('http://localhost:5000/updateFaculty', 
@@ -127,10 +127,10 @@ const updateFaculty = async (fac,note) => {
               'auth-token': localStorage.getItem('auth-token'),
               }
           }).then(response => {
-                  console.log(response)
-            }).catch(error => {
-                  console.log(error.response)
-            })}
+            alert(response.data)
+        }).catch(error => {
+           alert("Error: "+error.response.data)
+        })}
             
   const deleteFaculty = async(fac)=>{
     axios.post('http://localhost:5000/deleteFaculty', 
@@ -141,7 +141,7 @@ const updateFaculty = async (fac,note) => {
       'auth-token': localStorage.getItem('auth-token'),
       }
   }).then(response => {
-          console.log(response)
-    }).catch(error => {
-          console.log(error.response)
-    })}
+    alert(response.data)
+}).catch(error => {
+   alert("Error: "+error.response.data)
+})}

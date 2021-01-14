@@ -23,6 +23,13 @@ export default function HODNavigationBar() {
             <NavDropdown.Item href="/SendLeaveRequest">Send Leave Request</NavDropdown.Item>
             </NavDropdown>
             
+            <NavDropdown title="HAGET SHIKO">
+            <NavDropdown.Item href="/ViewSlotLinkings">View Slot Linking</NavDropdown.Item>
+            <NavDropdown.Item href="/ManageSlots">Manage Slots</NavDropdown.Item>
+
+            </NavDropdown>
+
+
             <Nav.Link  href = '/Notifications'> Notifications </Nav.Link>
 
             <Nav.Link href = '/AllRequests'> View All Requests </Nav.Link>

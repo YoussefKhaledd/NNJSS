@@ -114,9 +114,9 @@ const addDepartment = async (name,fac) => {
         'auth-token': localStorage.getItem('auth-token'),
         }
     }).then(response => {
-            console.log(response)
-      }).catch(error => {
-            console.log(error.response)
+      alert(response.data)
+    }).catch(error => {
+          alert("Error: "+error.response.data)
       })}
 
 const updateDepartment = async (name,fac,depNew) => {
@@ -132,9 +132,9 @@ const updateDepartment = async (name,fac,depNew) => {
               'auth-token': localStorage.getItem('auth-token'),
               }
           }).then(response => {
-                  console.log(response)
-            }).catch(error => {
-                  console.log(error.response)
+            alert(response.data)
+          }).catch(error => {
+                alert("Error: "+error.response.data)
             })}
             
   const deleteDepartment = async(name,fac)=>{
@@ -147,7 +147,7 @@ const updateDepartment = async (name,fac,depNew) => {
       'auth-token': localStorage.getItem('auth-token'),
       }
   }).then(response => {
-          console.log(response)
-    }).catch(error => {
-          console.log(error.response)
+    alert(response.data)
+  }).catch(error => {
+        alert("Error: "+error.response.data)
     })}

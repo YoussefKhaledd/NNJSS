@@ -19,7 +19,7 @@ export default function CheckAttendance() {
     axios.post('http://localhost:5000/checkStaffAttendance', 
       {
           staffId:id,
-          month:month1
+          month:parseInt(month1)
       },
       {  
           headers: {
@@ -29,7 +29,7 @@ export default function CheckAttendance() {
           setview(response.data)
           //console.log(view)
         }).catch(error => {
-              console.log(error.response)
+              alert(error.response.data)
         })}
 
 

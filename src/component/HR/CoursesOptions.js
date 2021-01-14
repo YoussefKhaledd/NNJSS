@@ -123,9 +123,9 @@ const addCourse = async (id,cn,slots,dep) => {
         'auth-token': localStorage.getItem('auth-token'),
         }
     }).then(response => {
-            console.log(response)
-      }).catch(error => {
-            console.log(error.response)
+      alert(response.data)
+    }).catch(error => {
+          alert("Error: "+error.response.data)
       })}
 
 const updateCourse = async (id,cn,nid,slots) => {
@@ -142,9 +142,9 @@ const updateCourse = async (id,cn,nid,slots) => {
               'auth-token': localStorage.getItem('auth-token'),
               }
           }).then(response => {
-                  console.log(response)
-            }).catch(error => {
-                  console.log(error.response)
+            alert(response.data)
+          }).catch(error => {
+                alert("Error: "+error.response.data)
             })}
             
   const deleteCourse = async(name,id)=>{
@@ -157,7 +157,7 @@ const updateCourse = async (id,cn,nid,slots) => {
       'auth-token': localStorage.getItem('auth-token'),
       }
   }).then(response => {
-          console.log(response)
-    }).catch(error => {
-          console.log(error.response)
+    alert(response.data)
+  }).catch(error => {
+        alert("Error: "+error.response.data)
     })}

@@ -46,8 +46,8 @@ import Sign from './component/ALL/Sign'
 import ViewAttendance from './component/ALL/ViewAttendance'
 import MissingDays from './component/ALL/MissingDays'
 import Hours from './component/ALL/Hours1'
-
-
+import ViewSlotLinkings from './component/AC/ViewSlotLinkings'
+import ManageSlots from './component/AC/ManageSlots'
 
 
 import Trial from "./Trial" 
@@ -104,7 +104,10 @@ function App() {
             <Route path ="/ManualSignOut" exact component={ManualSignOut} />
             <Route path ="/ManualSignIn" exact component={ManualSignIn} />
 
-
+            <Route path ="/ViewSlotLinkings" exact component={ViewSlotLinkings} />
+            
+            <Route path ="/ManageSlots" exact component={ManageSlots} />
+            
             
 
 

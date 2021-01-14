@@ -78,7 +78,7 @@ const manualSignOut = async (id,year,month,day,checkOutmin,checkOuthour) => {
               'auth-token': localStorage.getItem('auth-token'),
               }
           }).then(response => {
-                  console.log(response)
-            }).catch(error => {
-                  console.log(error.response)
+            alert(response.data)
+          }).catch(error => {
+                alert("Error: "+error.response.data)
             })}    

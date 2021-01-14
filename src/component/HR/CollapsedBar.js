@@ -148,9 +148,9 @@ const addNewLocation = async (name,type,cap) => {
         'auth-token': localStorage.getItem('auth-token'),
         }
     }).then(response => {
-            console.log(response)
+            alert(response)
       }).catch(error => {
-            console.log(error.response)
+           alert("Error: "+error.response.data)
       })}
 
 const updateLoc = async (name,type,cap) => {
@@ -166,10 +166,10 @@ const updateLoc = async (name,type,cap) => {
               'auth-token': localStorage.getItem('auth-token'),
               }
           }).then(response => {
-                  console.log(response)
-            }).catch(error => {
-                  console.log(error.response)
-            })}
+            alert(response)
+      }).catch(error => {
+           alert("Error: "+error.response.data)
+      })}
             
   const deleteLoc = async(name)=>{
     axios.post('http://localhost:5000/deleteLocation', 
@@ -180,10 +180,10 @@ const updateLoc = async (name,type,cap) => {
       'auth-token': localStorage.getItem('auth-token'),
       }
   }).then(response => {
-          console.log(response)
-    }).catch(error => {
-          console.log(error.response)
-    })}
+    alert("location deleted succesfully")
+}).catch(error => {
+   alert("Error: "+error.response.data)
+})}
   
       
 export default CollapsedBar;

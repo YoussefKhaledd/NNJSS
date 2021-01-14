@@ -36,7 +36,7 @@ const viewLeaves = (list) => {
     <td>{elem.type}</td> 
     <td>{elem.day}/{elem.month}</td>
     <td>{elem.status}</td>
-    <td><Button variant="dark" onClick={e=>cancelLeave(id)} disabled={disabled}>Cancel</Button></td>
+    <td><Button variant="dark" onClick={(e)=>cancelLeave(id)} disabled={disabled}>Cancel</Button></td>
     
   </tr>
   )
@@ -48,7 +48,7 @@ export default function ViewAll() {
     const [reqs1,setReqs1] = useState([])
     const [reqs2,setReqs2] = useState([])
     const [reqs3,setReqs3] = useState([])
-    const [key, setKey] = useState('home');
+    const [key, setKey] = useState('all');
 
     useEffect(async ()=>{
       axios.get('http://localhost:5000/viewAllRequests', {  

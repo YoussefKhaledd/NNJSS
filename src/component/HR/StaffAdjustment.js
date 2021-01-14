@@ -241,9 +241,9 @@ const addNewStaff = async (name,age,gender,type,mail,sal,fac,dep,dayoff,loc) => 
           'auth-token': localStorage.getItem('auth-token'),
           }
       }).then(response => {
-              console.log(response)
-        }).catch(error => {
-              console.log(error.response)
+        alert(response.data)
+      }).catch(error => {
+            alert("Error: "+error.response.data)
         })}
   
 const updateStaff = async (id,name,age,gen,type,mail,sal,fac,dep,dayoff,loc) => {
@@ -267,9 +267,9 @@ const updateStaff = async (id,name,age,gen,type,mail,sal,fac,dep,dayoff,loc) => 
                   'auth-token': localStorage.getItem('auth-token'),
                   }
               }).then(response => {
-                      console.log(response)
-                }).catch(error => {
-                      console.log(error.response)
+                alert(response.data)
+              }).catch(error => {
+                    alert("Error: "+error.response.data)
                 })}
 const deleteStaff = async (id) => {
     axios.post('http://localhost:5000/deleteStaff', 
@@ -281,8 +281,8 @@ const deleteStaff = async (id) => {
           'auth-token': localStorage.getItem('auth-token'),
           }
       }).then(response => {
-              console.log(response)
-        }).catch(error => {
-              console.log(error.response)
+        alert(response.data)
+      }).catch(error => {
+            alert("Error: "+error.response.data)
         })}                
   

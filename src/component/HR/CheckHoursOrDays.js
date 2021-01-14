@@ -29,7 +29,7 @@ export default function CheckHoursOrDays() {
         setHours(response.data)
           //console.log(hours)
         }).catch(error => {
-              console.log(error.response)
+              alert(error.response)
         })}
  const checkDays = async (id1) => {
     checkHours(id1)
@@ -46,7 +46,7 @@ export default function CheckHoursOrDays() {
                   setViewState2('collapse show')
                   setViewState1('collapse show')
                 }).catch(error => {
-                      console.log(error.response)
+                      alert(error.response)
                 })
                
             }
